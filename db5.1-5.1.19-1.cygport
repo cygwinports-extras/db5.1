@@ -1,0 +1,10 @@
+inherit tcl berkdb
+
+PATCH_URI+=" 5.1-java.patch 5.1-tcl.patch"
+
+libdb5_1_devel_CONTENTS="usr/include/ usr/lib/lib*"
+
+src_install() {
+	cd ${B}
+	berkdb_install
+}
